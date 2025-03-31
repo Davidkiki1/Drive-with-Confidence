@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive with Confidence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Drive with Confidence</h1>
+    </header>
+    
+    <main>
+        <section id="inspection-booking">
+            <h2>Book an Inspection</h2>
+            <form id="bookingForm" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Inspection Details</legend>
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Car Details</legend>
+                    <label for="carMake">Car Make:</label>
+                    <input type="text" id="carMake" name="carMake" required>
+                    
+                    <label for="carModel">Car Model:</label>
+                    <input type="text" id="carModel" name="carModel" required>
+                    
+                    <label for="carYear">Car Year:</label>
+                    <input type="number" id="carYear" name="carYear" required>
+                    
+                    <label for="carKilometers">Kilometers Covered:</label>
+                    <input type="number" id="carKilometers" name="carKilometers" required>
+                    
+                    <label for="carColor">Car Color:</label>
+                    <input type="text" id="carColor" name="carColor" required>
+                    
+                    <label for="numberOfRepairs">Number of Repairs:</label>
+                    <input type="number" id="numberOfRepairs" name="numberOfRepairs" required>
+                    
+                    <label for="numberOfOwners">Number of Owners:</label>
+                    <input type="number" id="numberOfOwners" name="numberOfOwners" required>
+                    
+                    <label for="carImage">Upload Car Image:</label>
+                    <input type="file" id="carImage" name="carImage" accept="image/*" required>
+                </fieldset>
+                
+                <button type="submit">Book Inspection</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

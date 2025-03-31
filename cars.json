@@ -1,0 +1,53 @@
+[
+    {
+        "make": "Toyota",
+        "model": "Corolla",
+        "year_made": 2018,
+        "kilometers_covered": 85000,
+        "color": "White",
+        "number_of_repairs": 2,
+        "number_of_owners": 1,
+        "image": "car_images/toyota.jpg"
+    },
+    {
+        "make": "Honda",
+        "model": "Civic",
+        "year_made": 2020,
+        "kilometers_covered": 45000,
+        "color": "Black",
+        "number_of_repairs": 1,
+        "number_of_owners": 1,
+        "image": "car_images/Honda.jpg"
+    },
+    {
+        "make": "Ford",
+        "model": "Mustang",
+        "year_made": 2017,
+        "kilometers_covered": 60000,
+        "color": "Red",
+        "number_of_repairs": 3,
+        "number_of_owners": 2,
+        "image": "car_images/mustang.jpg"
+    },
+    {
+        "make": "BMW",
+        "model": "X5",
+        "year_made": 2019,
+        "kilometers_covered": 70000,
+        "color": "Blue",
+        "number_of_repairs": 1,
+        "number_of_owners": 1,
+        "image": "car_images/bmw.jpg"
+    },
+    {
+        "make": "Mercedes",
+        "model": "C-Class",
+        "year_made": 2021,
+        "kilometers_covered": 30000,
+        "color": "Silver",
+        "number_of_repairs": 0,
+        "number_of_owners": 1,
+        "image": "car_images/mercedes.jpg"
+    }
+  ]
+  
