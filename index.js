@@ -6,17 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cars = [];
 
+    // Load cars data from cars.json
     function loadCars() {
         fetch("cars.json")
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Failed to load cars data.');
+                    throw new Error('Failed to load cars data. Please check your connection or file path.');
                 }
                 return response.json();
             })
             .then(data => {
-                cars = data;
-                displayCars();
+                if (Array.isArray(data)) {
+                    cars = data;
+                    displayCars();
+                } else {
+                    throw new Error('Cars data is not in the expected format (should be an array).');
+                }
             })
             .catch(error => {
                 console.error("Error loading JSON:", error);
@@ -24,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
+    // Display cars data
     function displayCars() {
         carList.innerHTML = "<h2>Available Cars</h2>";
         if (cars.length === 0) {
@@ -56,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Handle form submission to add a new car
     bookingForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -80,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const reader = new FileReader();
         reader.onload = function (e) {
             newCar.image = e.target.result;
-            cars.push(newCar);
-            displayCars();
+            cars.push(newCar);  // Add new car to the list
+            displayCars();  // Re-render the car list
             bookingForm.reset();
             alert("Car added successfully!");
         };
@@ -91,5 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
         reader.readAsDataURL(imageFile);
     });
 
+    // Load the car data on page load
     loadCars();
 });

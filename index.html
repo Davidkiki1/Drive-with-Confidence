@@ -14,56 +14,84 @@
     <main>
         <section id="inspection-booking">
             <h2>Book an Inspection</h2>
-            <form id="bookingForm" enctype="multipart/form-data">
+            <form id="bookingForm" enctype="multipart/form-data" aria-labelledby="inspection-booking">
                 <fieldset>
                     <legend>Contact Information</legend>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required aria-required="true" placeholder="John">
+                    </div>
                     
-                    <label for="surname">Surname:</label>
-                    <input type="text" id="surname" name="surname" required>
+                    <div class="form-group">
+                        <label for="surname">Surname:</label>
+                        <input type="text" id="surname" name="surname" required aria-required="true" placeholder="Doe">
+                    </div>
                     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="john.doe@example.com">
+                    </div>
                     
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="123-456-7890">
+                    </div>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Inspection Details</legend>
-                    <label for="date">Preferred Date:</label>
-                    <input type="date" id="date" name="date" required>
+                    <div class="form-group">
+                        <label for="date">Preferred Date:</label>
+                        <input type="date" id="date" name="date" required aria-required="true">
+                    </div>
                     
-                    <label for="time">Preferred Time:</label>
-                    <input type="time" id="time" name="time" required>
+                    <div class="form-group">
+                        <label for="time">Preferred Time:</label>
+                        <input type="time" id="time" name="time" required aria-required="true">
+                    </div>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Car Details</legend>
-                    <label for="carMake">Car Make:</label>
-                    <input type="text" id="carMake" name="carMake" required>
+                    <div class="form-group">
+                        <label for="carMake">Car Make:</label>
+                        <input type="text" id="carMake" name="carMake" required aria-required="true" placeholder="Toyota">
+                    </div>
                     
-                    <label for="carModel">Car Model:</label>
-                    <input type="text" id="carModel" name="carModel" required>
+                    <div class="form-group">
+                        <label for="carModel">Car Model:</label>
+                        <input type="text" id="carModel" name="carModel" required aria-required="true" placeholder="Corolla">
+                    </div>
                     
-                    <label for="carYear">Car Year:</label>
-                    <input type="number" id="carYear" name="carYear" required>
+                    <div class="form-group">
+                        <label for="carYear">Car Year:</label>
+                        <input type="number" id="carYear" name="carYear" required aria-required="true" placeholder="2018">
+                    </div>
                     
-                    <label for="carKilometers">Kilometers Covered:</label>
-                    <input type="number" id="carKilometers" name="carKilometers" required>
+                    <div class="form-group">
+                        <label for="carKilometers">Kilometers Covered:</label>
+                        <input type="number" id="carKilometers" name="carKilometers" required aria-required="true" placeholder="50000">
+                    </div>
                     
-                    <label for="carColor">Car Color:</label>
-                    <input type="text" id="carColor" name="carColor" required>
+                    <div class="form-group">
+                        <label for="carColor">Car Color:</label>
+                        <input type="text" id="carColor" name="carColor" required aria-required="true" placeholder="White">
+                    </div>
                     
-                    <label for="numberOfRepairs">Number of Repairs:</label>
-                    <input type="number" id="numberOfRepairs" name="numberOfRepairs" required>
+                    <div class="form-group">
+                        <label for="numberOfRepairs">Number of Repairs:</label>
+                        <input type="number" id="numberOfRepairs" name="numberOfRepairs" required aria-required="true" placeholder="2">
+                    </div>
                     
-                    <label for="numberOfOwners">Number of Owners:</label>
-                    <input type="number" id="numberOfOwners" name="numberOfOwners" required>
+                    <div class="form-group">
+                        <label for="numberOfOwners">Number of Owners:</label>
+                        <input type="number" id="numberOfOwners" name="numberOfOwners" required aria-required="true" placeholder="1">
+                    </div>
                     
-                    <label for="carImage">Upload Car Image:</label>
-                    <input type="file" id="carImage" name="carImage" accept="image/*" required>
+                    <div class="form-group">
+                        <label for="carImage">Upload Car Image:</label>
+                        <input type="file" id="carImage" name="carImage" accept="image/*" required aria-required="true">
+                    </div>
                 </fieldset>
                 
                 <button type="submit">Book Inspection</button>
