@@ -1,5 +1,6 @@
-[
-    {
+{
+    "cars": [
+      {
         "make": "Toyota",
         "model": "Corolla",
         "year_made": 2018,
@@ -8,8 +9,8 @@
         "number_of_repairs": 2,
         "number_of_owners": 1,
         "image": "car_images/toyota.jpg"
-    },
-    {
+      },
+      {
         "make": "Honda",
         "model": "Civic",
         "year_made": 2020,
@@ -18,8 +19,8 @@
         "number_of_repairs": 1,
         "number_of_owners": 1,
         "image": "car_images/Honda.jpg"
-    },
-    {
+      },
+      {
         "make": "Ford",
         "model": "Mustang",
         "year_made": 2017,
@@ -28,8 +29,8 @@
         "number_of_repairs": 3,
         "number_of_owners": 2,
         "image": "car_images/mustang.jpg"
-    },
-    {
+      },
+      {
         "make": "BMW",
         "model": "X5",
         "year_made": 2019,
@@ -38,8 +39,8 @@
         "number_of_repairs": 1,
         "number_of_owners": 1,
         "image": "car_images/bmw.jpg"
-    },
-    {
+      },
+      {
         "make": "Mercedes",
         "model": "C-Class",
         "year_made": 2021,
@@ -48,6 +49,6 @@
         "number_of_repairs": 0,
         "number_of_owners": 1,
         "image": "car_images/mercedes.jpg"
-    }
-  ]
-  
+      }
+    ]
+  }

@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cars = [];
 
-    // Load cars data from cars.json
+    // Load cars data from JSON Server
     function loadCars() {
-        fetch("cars.json")
+        fetch("http://localhost:3000/cars")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to load cars data. Please check your connection or file path.');
@@ -87,10 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const reader = new FileReader();
         reader.onload = function (e) {
             newCar.image = e.target.result;
-            cars.push(newCar);  // Add new car to the list
-            displayCars();  // Re-render the car list
-            bookingForm.reset();
-            alert("Car added successfully!");
+
+            // Send new car data to JSON Server
+            fetch("http://localhost:3000/cars", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newCar)
+            })
+            .then(response => response.json())
+            .then(data => {
+                cars.push(data);  // Update the local array with the new car from the server
+                displayCars();  // Refresh the car list
+                bookingForm.reset();
+                alert("Car added successfully!");
+            })
+            .catch(error => {
+                console.error("Error adding car:", error);
+                alert("Failed to add car.");
+            });
         };
         reader.onerror = function () {
             alert("Error reading the image file.");
